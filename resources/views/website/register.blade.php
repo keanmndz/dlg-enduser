@@ -24,38 +24,45 @@
             <div class="form">
               <div id="sendmessage">Succesfully Registered! Please Verify your E-mail.</div>
               <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
+              <form action="/account" method="post">
+
                  {{ csrf_field() }}
 
-                <!-- Last Name -->
-                <div class="form-group">
-                  Last Name: <input class="form-control" type="text" name="lname" autofocus required>
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  First Name: <input class="form-control" type="text" name="fname" required>
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  Company Name: <input class="form-control" type="text" name="company" required>
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  Username: <input class="form-control" type="text" name="username" required>
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  Password: <input class="form-control" type="password" name="password" disabled>
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  Address: <input class="form-control" type="text" name="address" required>
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  Contact Number: <input class="form-control" type="text" name="contact" required>
-                  <div class="validation"></div>
-                </div>
+                            <!-- Last Name -->
+                            <div class="form-group">
+                    Last Name: <input class="form-control" type="text" name="lname" autofocus required>
+                  </div>
+
+                  <!-- First Name -->
+                  <div class="form-group">
+                    First Name: <input class="form-control" type="text" name="fname" required>
+                  </div>
+
+                  <!-- Company -->
+                  <div class="form-group">
+                    Company Name: <input class="form-control" type="text" name="company" required>
+                  </div>
+
+                  <!-- Username -->
+                  <div class="form-group">
+                    Username: <input class="form-control" type="text" name="username" required>
+                  </div>
+
+                  <!-- Password -->
+                  <div class="form-group">
+                    Password: <input class="form-control" type="password" name="password" disabled>
+                  </div>
+
+                  <!-- Address -->
+                  <div class="form-group">
+                    Address: <input class="form-control" type="text" name="address" required>
+                  </div>
+
+                  <!-- Contact -->
+                  <div class="form-group">
+                    Contact Number: <input class="form-control" type="text" name="contact" required>
+                  </div>
+
                 <div class="text-center"><button type="submit" title="Send Message">Register</button></div>
               </form>
             </div>
@@ -79,7 +86,7 @@
               <div id="sendmessage">Succesfully Registered! Please Verify your E-mail.</div>
               <div id="errormessage"></div> 
               
-              <form action="/menu" method="post" role="form" class="contactForm">
+              <form action="/account" method="post">
 
               {{ csrf_field() }}
 

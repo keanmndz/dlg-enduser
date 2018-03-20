@@ -265,7 +265,8 @@
             <br>
               <div id="sendmessage">Succesfully Registered! Please Verify your E-mail.</div>
               <div id="errormessage"></div>
-              <form action="/menu" method="post" role="form" class="contactForm">
+
+              <form action="/account" method="post">
 
               {{ csrf_field() }}
 
@@ -278,7 +279,7 @@
                   <div class="validation"></div>
                 </div>
                 <div><center><a href="">Forgot Password?</a></center></div><br>
-                <div class="text-center"><button type="submit" title="Send Message">Login</button></div>
+                <div class="form group text-center"><button type="submit" >Login</button></div>
               </form>
             </div>
             

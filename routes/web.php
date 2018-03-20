@@ -13,16 +13,36 @@
 
 Route::get('/', function () {
     return view('website/user-main');
+}); 
+
+Route::get('/account', function () {
+    return view('user/account');
 });
 
+
+//cart
 Route::get('/menu', 'userController@show');
+Route::post('/menu', 'userController@show');
 
-Route::get('/checkout', function () {
-    return view('order/checkout');
-});
+//increment
+Route::get('/menu','userController@increment');
+
+//remove
+Route::get('/menu/remove', 'userController@remove');
+
+Route::post('/checkout', 'userController@cart');
+
+Route::post('confirm','userController@checkDetails');
 
 
 Route::get('/register', 'userController@register');
 
+//Login
+
+Route::post('/','Auth\LoginController@login');
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
